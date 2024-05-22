@@ -28,3 +28,7 @@ THEN:user can access any information about event in offline and get error when c
 5)GIVEN: user click on icon
 WHEN:click on display chart icon 
 THEN:user can see chart with number of upcoming events in each city
+
+
+serverless functions will be responsible for managing user access to the Google Calendar API. This includes handling user authentication and authorization processes, ensuring that only authenticated users with the appropriate permissions can interact with the API. This function may implement OAuth2 flows, validate user credentials, and manage access tokens or refresh tokens.serverless function will be dedicated to obtaining and refreshing OAuth2 tokens required for making authorized requests to the Google Calendar API. This function will handle the initial token acquisition process, as well as refreshing expired tokens seamlessly, without interrupting the user experience in the React application.
+To ensure the security of interactions between the React application and the Google Calendar API, a serverless function will act as a secure intermediary. Instead of exposing sensitive API credentials or tokens directly in the client-side React application, this function will serve as a proxy, receiving requests from the React app, validating them, and forwarding authorized requests to the Google Calendar API.
